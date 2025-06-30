@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>promises and .then,try.catch </h1>
+    <!-- <script>
+        let promise1 = new Promise(function (resolve, reject) {
+            let a = prompt("enter a number ")
+            if (a >= 10) {
+                setTimeout(function () {
+                    resolve("hello")
+                }, 2000)
+            }
+            else {
+                setTimeout(function () {
+                    reject("hello")
+                }, 2000)
+            }
+
+
+        })
+
+        promise1.then(() => {       
+                console.log("Your promise successfull fullfilled")
+        })
+        promise1.catch(() => {
+            console.log("ops there is error some error in your promise you got some error")
+        })
+    </script> -->
+    <script>
+        let promise1 = new Promise(function (resolve, reject) {
+          let a = prompt("enter a number ");
+      
+          if (a >= 10) {
+            setTimeout(function () {
+              resolve("hello");
+            }, 2000);
+          } else {
+            setTimeout(function () {
+              reject("hello");
+            }, 2000);
+          }
+        });
+      
+        promise1
+          .then(() => {
+            console.log("Your promise successfully fulfilled"); // Log here after fulfillment
+          })
+          .catch(() => {
+            console.log("Oops, there was an error in your promise"); // Log here after rejection
+          });
+      </script>
+</body>
+
+</html>

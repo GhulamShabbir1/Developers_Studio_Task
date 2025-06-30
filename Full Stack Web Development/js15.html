@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>callback</h1>
+    <script>
+        function hello(error,src)
+        {
+            if (error) {
+                console.error
+                return;
+            }
+            console.log("hello");
+            alert("script loaded" + src);
+                }
+
+                
+        function raw(src,callback) {
+            let script=document.createElement('script');
+            script.src=src;
+            script.onload=function() {
+                console.log("script loaded");
+                callback(null,src);
+            }
+            script.onerror=function() {
+                console.log("script error")
+                callback(new Error("script"));
+            }
+                document.body.appendChild(script);
+        }
+    raw("https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js",hello)
+    </script>
+</body>
+</html>

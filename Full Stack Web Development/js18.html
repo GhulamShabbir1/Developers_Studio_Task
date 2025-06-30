@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>POST Request with Fetch API</h1>
+    <script>
+        let p = fetch('https://jsonplaceholder.typicode.com/todos/1')
+            .then(response => response.json())
+            .then(json => console.log(json))
+        let option = {
+            "userId": 1,
+            "it": 1,
+            "title": "are or do repels provide blacked out except option criticizes",
+            "body": "because he also accepts\nundertakes the consequences of refusal and when\nhe criticizes the trouble so that the whole\nof our things are but they are the matter will happen to the architect"
+        }
+
+        const createTodo = async (todo) => {
+        let options = {
+                method: "POST",
+                headers: {
+                        "Content-type": "application/json"
+                },
+                body: JSON.stringify(todo),
+        }
+        let p = await fetch('https://jsonplaceholder.typicode.com/posts', options)
+        let response = await p.json()
+        return response
+}
+
+const getTodo = async (id) => {
+        let response = await fetch('https://jsonplaceholder.typicode.com/posts/' + id)
+        let r = await response.json()
+        return r
+}
+
+const mainFunc = async () => {
+        let todo = {
+                title: 'Harry2',
+                body: 'bhai2',
+                userId: 1100,
+        }
+        let todor = await createTodo(todo)
+        console.log(todor)
+        console.log(await getTodo(1))
+}
+
+mainFunc()
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>ApplianceOnline</title>
+
+    <style>
+       
+        body,
+        html {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
+        
+        .container-fluid {
+            padding-right: 0;
+            padding-left: 0;
+        }
+
+
+    </style>
+
+</head>
+
+<!-- Header -->
+<div class="container-fluid p-1 bg-danger text-center text-white">
+    <h2 class="m-0 fs-4 fs-sm-3 fs-md-2 fs-lg-1 fs-xl-1 fs-xxl-1 ">
+        <i class="fa-solid fa-truck-fast fa-lg pt-2" style="color: #00B5CC;"></i>
+        <span style="color: #00B5CC;">Free</span> next Day Delivery
+        <span class="badge" style="color: #eff3f3; background-color: #00B5CC;">
+            Shop Now
+        </span>
+    </h2>
+</div>
+
+<!-- information -->
+
+<div class="container-fluid text-center p-2 d-none d-lg-inline-block fs-lg-5 ">
+    <i class="fa-solid fa-truck" style="color: #00B5CC; "></i>
+    <a href="#" class="text-decoration-none "
+        style="margin-right: 10px; color: gray; font-size: 13px;">&nbsp;&nbsp;&nbsp;
+        Free,Next Day Delivery</a>
+
+    <i class="fa-solid fa-recycle" style="color: #00B5CC;"></i>
+    <a href="#" class="me-3 text-decoration-none "
+        style="margin-right: 10px; color: gray; font-size: 13px;">&nbsp;&nbsp;&nbsp;
+        Free Removal and Recycling of Old products* </a>
+
+    <i class="fa-solid fa-dollar-sign" style="color: #00B5CC;"></i>
+    <a href="#" class="me-3 text-decoration-none "
+        style="margin-right: 10px; color: gray; font-size: 13px;">&nbsp;&nbsp;&nbsp;
+        Free Match Gurantees*</a>
+
+    <i class="fa-solid fa-phone" style="color: #00B5CC;"></i>
+    <a href="#" class="me-3 text-decoration-none "
+        style="margin-right: 10px; color: gray; font-size: 13px;">&nbsp;&nbsp;&nbsp;
+        24/7 Free Australian Customers Support</a>
+
+    <a href="#" style="color: #00B5CC;" class="me-3 text-decoration-none fs-6 d-none d-xxl-inline">About Us</a>
+    <a href="#" style="color: #0c0c0c; font-size: 13px; font-weight: 900;"
+        class="link-items text-decoration-none fs-6 d-none d-xl-inline">1300 000 500</a>
+</div>
+
+<!-- nav -->
+
+<div class="container mt-3 d-none d-lg-block ">
+    <div class="row align-items-center ">
+
+        <div class="col-3 col-sm-3 text-start ">
+            <img src="./Assests/logo.png" alt="Logo" class="img-fluid" style="height:50px;width: 100%;">
+        </div>
+
+        <div class="col-4 col-sm-3  position-relative">
+            <input type="text" class="form-control rounded-2" placeholder="Search for a product" />
+            <span class="position-absolute top-50 end-0 translate-middle-y pe-3" style="color:#00B5CC;">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </span>
+        </div>
+
+        <div class="col-6 col-sm-6 text-center align-items-center ">
+            <a href="#" class="text-decoration-none text-primary small  fs-4">
+                <span style="white-space: wrap; text-align: left; font-size: 13px;"> Click to set your location
+                </span>
+                <i class="fa-solid fa-pencil" style="color:#797f80;"></i>
+            </a>
+            &nbsp;
+
+            <a href="#" class="text-decoration-none text-secondary">
+                <i class="fa-solid fa-user"></i> My Account
+            </a>
+            &nbsp;
+
+            <img src="./Assests/sslscure.webp" alt="SSL" style="height:40px;" />
+            &nbsp;
+
+            <a href="#" class="text-decoration-none text-secondary">
+                <i class="fa-solid fa-cart-shopping"></i> <span class="fw-bold">Cart</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Information at screen less then lg -->
+
+<div class="row  mt-3 d-lg-none text-center align-items-center">
+    <nav class="container navbar-expand-lg   navbar-dark">
+        <div class="row  d-lg-none text-center align-items-center">
+            <div class="col-3">
+                <button title="btn" class="navbar-toggler bg-secondary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mynavbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <a style="text-decoration: none;" href="#">&nbsp;<i class="fa fa-search text-secondary"></i></a>
+            </div>
+            <div class="col-6">
+                <a class="header-item logo d-inline-block text-center" href="#">
+                    <img class="img-fluid" style="margin-bottom: 4px;" src="./Assests/logo.png" alt="Logo" height="40">
+                </a>
+            </div>
+            <div class="col-3">
+                <img style="width: 40px; height: 40px;" src="./Assests/grocery.png" alt="">
+            </div>
+        </div>
+        <div class="offcanvas offcanvas-start d-lg-none  bg-primary" id="mynavbar">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title"></h1>
+                <button title="sidebar-close" type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+            </div>
+            <div class="offcanvas-body">
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i></i>&nbsp;fridge
+                    And Freezer</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge And
+                    Freezer</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge And
+                    Freezer</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge &
+                    Freezer</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i>fridge And Freezer
+                </p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge &
+                    Freezers</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge &
+                    Freezers</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge &
+                    Freezers</p>
+                <p class="border-bottom active"><i class="fa-solid fa-book" style="color: white;"></i> &nbsp; fridge &
+                    Freezers</p>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse justify-content-center ">
+            <div class="row header">
+                <div class="col p-1 ">
+                    <a class="header-item logo" href="#">
+                        <img style="margin-bottom: 17px;" src="logo.png" alt="" height="40px">
+                    </a>
+                </div>
+                <div class="col p-1 input-group  header-item search">
+                    <input type="text" placeholder="Search for a product">
+                    <button title="a"><i class="fa fa-search"></i></button>
+                </div>
+                <div class="col-sm-2 p-1  header-item location">
+                    <a href="#">Click to set your location</a>
+                    <a href="#"><i class=" fa fa-pencil" style="color: gray;"></i></a>
+                </div>
+                <div class=" col p-1  header-item account">
+                    <a href="" class="account-anchor">&nbsp;&nbsp;&nbsp;<i class=" fa fa-user-circle"></i><span
+                            class="account-anchor-text">My Account</span></a>
+                </div>
+                <div class="col p-1 header-item ssl">
+                    <img src="ssl-badge.png" alt="SSL Secured" height="30">
+                </div>
+                <div class="col  p-1 header-item cart">
+                    <i class="fa fa-shopping-cart"></i> Cart
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+<!-- Navbar  -->
+
+<nav class="navbar navbar-expand-lg d-none d-lg-block mt-3 p-0" style="background-color: #575563;">
+    <nav class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+            aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <nav class="navbar navbar-expand d-none d-lg-block" style="background-color: #575563;">
+            <div class="container">
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
+                        <i class="fa-solid fa-bars"></i> SHOP ALL PRODUCTS
+                    </button>
+
+                    <div class="dropdown-menu p-3" style="width: 600px;">
+                        <div class="row">
+
+                            <div class="col-4 bg-primary">
+                                <ul class="list-group list-group-flush bg-primary" style="width: 250px;">
+                                    <li class="list-group-item bg-primary text-white ">
+                                        <i class="fa-solid fa-tshirt"></i> fridge And Freezer
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-snowflake "></i>&nbsp; Fridges &
+                                        Freezers</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-sink"></i>&nbsp; Dishwashers,
+                                        Sinks
+                                        & Taps</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-fire"></i>&nbsp; Ovens & Cooking
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-tv"></i>&nbsp; TV, Audio &
+                                        Electronics</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-fan"></i>&nbsp; Heating & Cooling
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-blender"></i>&nbsp; Small
+                                        Appliances
+                                    </li>
+                                    <li class="list-group-item"><i class="fa-solid fa-bacon"></i>&nbsp; BBQs & Outdoor
+                                        Living</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-heart"></i>&nbsp; Health, Beauty &
+                                        Fitness</li>
+                                    <li class="list-group-item"><i class="fa-solid fa-couch"></i>&nbsp; Furniture &
+                                        Bedding</li>
+                                </ul>
+                            </div>
+
+                            <div class="col-8 w-75" >
+                                <h5 class="text-info">Fridges & Freezers</h5>
+                                <ul class="list-unstyled">
+                                    <li><a href="#" class="text-dark">Washing Machines</a></li>
+                                    <li><a href="#" class="text-dark">Dryers</a></li>
+                                    <li><a href="#" class="text-dark">Laundry Packages</a></li>
+                                    <li><a href="#" class="text-dark">Washer Dryer Combo</a></li>
+                                    <li><a href="#" class="text-dark">View All</a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="collapse navbar-collapse show" id="mainNavbar">
+                    <ul class="navbar-nav ms-3">
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Loandry</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Fridges & Freezers</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Cookings</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Dishwashers</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Small Appliances</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">TVs</a>
+                        </li>
+                        <li class="nav-item border-start border-secondary">
+                            <a class="nav-link text-white fw-bold" href="#">Heading</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </nav>
+</nav>
+
+<!-- Banner -->
+
+<div class="container mt-3">
+    <img class="img-fluid" src="./Assests/homepagebanner70hx1280wstockwontlast-99dbe68e.png" alt="">
+</div>
+
+<!-- product Grid -->
+
+<div class="container my-4">
+
+    <div class="container">
+    
+        <!-- row1 -->
+
+        <div class="row g-3 mb-3">
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- row 2 -->
+    <div class="row g-3">
+
+        <div class="col-12 col-lg-9">
+            <div class="row g-3">
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Fridge and Freezer">
+                        <div class="card-body">
+                            <h6 class="card-title">Fridge and Freezer</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Fridge and Freezer">
+                        <div class="card-body">
+                            <h6 class="card-title">Fridge and Freezer</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Fridge and Freezer">
+                        <div class="card-body">
+                            <h6 class="card-title">Fridge and Freezer</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="TV, Audio & Electronics">
+                        <div class="card-body">
+                            <h6 class="card-title">TV, Audio & Electronics</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Health, Beauty & Fitness">
+                        <div class="card-body">
+                            <h6 class="card-title">Health, Beauty & Fitness</h6>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-6 col-lg-4">
+                    <div class="card h-100 text-center">
+                        <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Beds & Mattresses">
+                        <div class="card-body">
+                            <h6 class="card-title">Beds & Mattresses</h6>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="col-12 col-lg-3 d-none d-lg-block">
+            <div class="card h-100 text-center">
+                <img src="./Assests/homepagetallbanner2.png" class="card-img" alt="Sale Banner">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row g-3">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <img src="./Assests/fridge&freezer.webp" class="card-img-top" alt="Ovens & Cooking">
+                    <div class="card-body">
+                        <h6 class="card-title">Frigde and Freezer</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Banners  -->
+
+    <div class="row g-3 my-2 overflow-hidden ">
+
+        <div class="col-12 col-lg-6" style="border: 2px solid black;">
+            <img class="img-fluid" src="./Assests/ad1.webp" alt="">
+        </div>
+
+
+        <div class="col-12 col-lg-6" style="border: 2px solid black;">
+            <img class="img-fluid" src="./Assests/ad1.webp" alt="">
+        </div>
+    </div>
+
+<!-- Provide Servies  -->
+
+    <div class="row g-3">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card  text-center">
+                    <i class="fa-solid fa-truck fa-2xl mt-5 mb-5" style="color: #00B5CC; "></i>
+                    <div class="card-body">
+                        <h4 class="card-title">Free Next Day Delivery</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <i class="fa-solid fa-recycle fa-2xl mt-5 mb-5" style="color: #00B5CC; "></i>
+                    <div class="card-body">
+                        <h4 class="card-title">Frigde and Freezer</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card h-100 text-center">
+                    <i class="fa-solid fa-phone fa-2xl mt-5 mb-5" style="color: #00B5CC; "></i>
+                    <div class="card-body">
+                        <h4 class="card-title">Frigde and Freezer</h4>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card  text-center">
+                    <i class="fa-solid fa-dollar-sign fa-2xl mt-5 mb-5" style="color: #00B5CC; "></i>
+                    <div class="card-body">
+                        <h4 class="card-title">Frigde and Freezer</h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- View Informations -->
+
+    <div class="row g-3">
+
+        <div class="row g-3">
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card  p-4">
+                    <h4 class="fs-4"> Clearence</h4>
+                    <p style="font-size: 13px;">Pickup Bargin Today</p>
+                    <div class="d-lg-inline-block">
+                        <button type="button" class="btn btn-sm w-40 "
+                            style="background-color: orangered;margin-right: 150px;">View</button>
+                        <i class="fa-solid fa-tag fa-2xl"
+                            style="color:  #b0b7b8; margin-bottom: 50px; margin-top: 30px;"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card  p-4">
+                    <h4 class="fs-4"> Clearence</h4>
+                    <p style="font-size: 13px;">Pickup Bargin Today</p>
+                    <div class="d-lg-inline-block">
+                        <button type="button" class="btn btn-sm w-40 "
+                            style="background-color: orangered;margin-right: 150px;">View</button>
+                        <i class="fa-solid fa-tag fa-2xl"
+                            style="color:  #b0b7b8; margin-bottom: 50px; margin-top: 30px;"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card   p-4">
+                    <h4 class="fs-4"> Clearence</h4>
+                    <p style="font-size: 13px;">Pickup Bargin Today</p>
+                    <div class="d-lg-inline-block">
+                        <button type="button" class="btn btn-sm w-40"
+                            style="background-color: orangered; margin-right: 150px;">View</button>
+                        <i class="fa-solid fa-tag fa-2xl"
+                            style="color:  #b0b7b8; margin-bottom: 50px; margin-top: 30px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-6 col-lg-3">
+                <div class="card  p-4">
+                    <h4 class="fs-4"> Clearence</h4>
+                    <p style="font-size: 13px;">Pickup Bargin Today</p>
+                    <div class="d-lg-inline-block">
+                        <button type="button" class="btn btn-sm w-40"
+                            style="background-color: orangered; margin-right: 150px;">View</button>
+                        <i class="fa-solid fa-tag fa-2xl"
+                            style="color:  #b0b7b8; margin-bottom: 50px; margin-top: 30px;"></i>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+<!-- Brands -->
+
+<div class="container-fluid" style="background-color: #b0b7b8;">
+    <div class="container">
+        <h3 class="pt-5">
+            Our Trusted Brand
+        </h3>
+        <div class="container w-75 mb-3 ">
+            <img src="./Assests/brand1.png" style="width: 100px;" alt="">
+            <img class="w-5" src="./Assests/brand2.png" style="width: 100px;" alt="">
+            <img class="w-5" src="./Assests/brand3.png" style="width: 100px;" alt="">
+            <img class="w-5" src="./Assests/brand4.webp" style="width: 100px;" alt="">
+            <img class="w-5" src="./Assests/brand5.webp" style="width: 100px;" alt="">
+        </div>
+        <div class="container w-75 mb-3">
+            <img src="./Assests/brand1.png" style="width: 100px;" alt="">
+            <img src="./Assests/brand2.png" style="width: 100px;" alt="">
+            <img src="./Assests/brand3.png" style="width: 100px;" alt="">
+            <img src="./Assests/brand4.webp" style="width: 100px;" alt="">
+            <img src="./Assests/brand5.webp" style="width: 100px;" alt="">
+        </div>
+    </div>
+
+    <hr>
+
+<!-- System Information -->
+
+    <div class="container  py-5  mb-3" style="width: 80%;">
+        <div class="row text-start fs-6">
+            <div class="col-md ">
+                <h5>Customer Service</h5>
+                <ul class="list-unstyled">
+                    <li>Delivery & Legendary Service</li>
+                    <li>Klarna - Buy Now Pay Later</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Buying Guidance</li>
+                    <li>Afterpay It</li>
+                    <li>Buying Guidance</li>
+                    <li>Payment Method</li>
+                    <li>Zip - Own it Now, Pay Later</li>
+                    <li>Payment Method</li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h5>&nbsp;</h5>
+                <ul class="list-unstyled">
+                    <li>Buying Guidance</li>
+                    <li>Afterpay It</li>
+                    <li>Buying Guidance</li>
+                    <li>Payment Method</li>
+                    <li>Zip - Own it Now, Pay Later</li>
+                    <li>Payment Method</li>
+                    <li>Product Review</li>
+                    <li>Zip - Own it Now, Pay Later</li>
+                    <li>Product Review</li>
+
+                </ul>
+            </div>
+            <div class="col-md">
+                <h5>About Appliance Online</h5>
+                <ul class="list-unstyled">
+                    <li>Payment Method</li>
+                    <li>Zip - Own it Now, Pay Later</li>
+                    <li>Payment Method</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Klarna - Buy Now Pay Later</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Buying Guidance</li>
+                    <li>Afterpay It</li>
+                    <li>Buying Guidance</li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h5>Our Partners</h5>
+                <ul class="list-unstyled">
+                    <li>Product Review</li>
+                    <li>Zip - Own it Now, Pay Later</li>
+                    <li>Product Review</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Klarna - Buy Now Pay Later</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Buying Guidance</li>
+                    <li>Afterpay It</li>
+                    <li>Buying Guidance</li>
+                </ul>
+            </div>
+            <div class="col-md">
+                <h5>&nbsp;</h5>
+                <ul class="list-unstyled">
+                    <li>FAQ</li>
+                    <li>What is RRP</li>
+                    <li>FAQ</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Klarna - Buy Now Pay Later</li>
+                    <li>Delivery & Legendary Service</li>
+                    <li>Buying Guidance</li>
+                    <li>Afterpay It</li>
+                    <li>Buying Guidance</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+<!-- Payment Methods -->
+
+    <div class=" container  mb-5">
+        <span>
+            <img src="./Assests/paypal.jpeg" alt="" style="width: 70px;height: 25px;">
+            <img src="./Assests/visa.png" alt="" style="width: 70px;height: 25px;">
+            <img src="./Assests/mastercard.png" alt="" style="width: 70px;height: 25px;">
+            <img src="./Assests/paypal.jpeg" alt="" style="width: 70px;height: 25px;">
+            <img src="./Assests/visa.png" alt="" style="width: 70px;height: 25px;">
+
+        </span>
+        <span style=" background-color: #b0b7b8; float: right;">
+            <i class="fa-brands fa-facebook fa-2xl " style="color:  #595d5e; margin-left: 30px;"></i>
+            <i class="fa-brands fa-instagram fa-2xl" style="color:  #595d5e; margin-left: 30px;"></i>
+            <i class="fa-brands fa-tiktok fa-2xl" style="color:  #595d5e; margin-left: 30px;"></i>
+            <i class="fa-brands fa-youtube fa-2xl" style="color:  #595d5e; margin-left: 30px;"></i>
+        </span>
+
+
+    </div>
+
+<!-- Contact Form -->
+
+    <div class="container-fluid py-5 text-white" style="background-color: #575563;">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-8">
+                    <h5 class="fw-bold mb-4">Get free content and exclusive deals</h5>
+                    <form>
+                        <div class="row">
+                            <div class="col-auto mb-3">
+                                <label for="name" class="form-label d-block">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" style="min-width: 120px;">
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="email" class="form-label d-block">Email <span
+                                        class="required">*</span></label>
+                                <input type="email" class="form-control" id="email" name="email"
+                                    style="min-width: 120px;">
+                            </div>
+                            <div class="col-auto mb-3">
+                                <label for="postcode" class="form-label d-block">Postcode <span
+                                        class="required">*</span></label>
+                                <input type="text" class="form-control" id="postcode" name="postcode"
+                                    style="min-width: 120px;">
+                            </div>
+                            <div class="col-auto align-self-end mb-3">
+                                <button type="submit" class="btn" style="background-color: #f57c2e; color: white;">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <div class="col-md-4">
+                    <h5 class="fw-bold mb-4">Acknowledgement of Country</h5>
+                    <p>
+                        In the spirit of reconciliation, Appliances Online acknowledges the Traditional Custodians of
+                        country
+                        throughout Australia and their connections to land, sea, and community. We pay our respect to
+                        their
+                        Elders past and present and extend that respect to all Aboriginal and Torres Strait Islander
+                        peoples today.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+<!-- Footer -->
+
+    <div>
+        <div class="container mt-4 ">
+            <img class="img-fluid" src="./Assests/homepagebanner70hx1280wstockwontlast-99dbe68e.png" alt="">
+        </div>
+    </div>
+
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+<script src="https://kit.fontawesome.com/c90dbca239.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>prototype</h1>
+    <script>
+        const a = {
+            name: "ali",
+            class: 10
+        }
+        let p = {
+            run: () => {
+                alert("hello")
+            }
+        }
+        let x = {
+            con: () => {
+                confirm("Are you sure you want to")
+            }
+        }
+        a.__proto__ = p
+        p.__proto__=x
+        console.log(a.name)
+        console.log(a.con)
+    </script>
+</body>
+
+</html>

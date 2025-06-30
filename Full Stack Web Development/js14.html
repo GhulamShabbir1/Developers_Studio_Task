@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="contain">
+        <button class="btn"> click kar gandu</button>
+    </div>
+
+    <script>
+        let btn=document.querySelector(".btn");
+        // btn.addEventListener("click",function(){
+        //     alert("kar gandu");
+        // })
+        let a=parseInt(prompt("enter a number "));
+        let b=parseInt(prompt("enter a number "));
+        let x=(a,b)=>{
+            console.log(a+b);
+        }
+
+        let y=(a,b)=>{
+            return a-b;
+        }
+        
+        btn.addEventListener('Click',x);
+        btn.addEventListener("dblclick",y);            
+    </script>
+</body>
+</html>

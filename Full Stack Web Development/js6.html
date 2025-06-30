@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array and class</h1>
+    <script>
+    // let employ={
+    //     name: "ghulam shabbir",
+    //     age: 22,
+    //     salary: 67890
+
+    // }
+    // console.log(employ);
+
+    // let array=[1,2,3,4,5,6,7,8,9,"stop"];
+    // console.log(array);
+
+    // let names=[9,2,0,1,6,3,8];
+
+    // console.log(names.length);
+    // names.push(5);
+    // console.log(names);
+    // names.sort();
+    // console.log(names);
+
+    var arr=[551,22,3,14,5,6,7,8,229]
+    // a=num.sort()
+    // console.log(a)
+
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] < arr[j]) {
+                let temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        
+        }
+        
+    }
+    console.log(arr)
+
+    </script>
+    
+</body>
+</html>

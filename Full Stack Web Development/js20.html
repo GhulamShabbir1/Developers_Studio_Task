@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>class ,constructor,inheritence</h1>
+    <script>
+        class favour1{
+            name=prompt("Enter your name ")
+            age=prompt("Enter your age ")
+            constructor(name,age){
+                this.age=age;
+                this.name=name;
+            }
+            display(){
+                console.log(this.age);
+                console.log(this.name);
+            }
+            approved(){
+                if(this.age>=18){
+                    alert("you are now eligible for this work");
+                }
+                else{
+                    alert("you are not eligible for this work");
+                }
+            }
+        }
+        let obj=new favour1(this.name,this.age)
+        console.log(obj.display())
+        console.log(obj.approved())
+    </script>
+</body>
+</html>
